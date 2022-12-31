@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/987d232d2e.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+    <div id="container">
+        <header id="header">
+            <a href="#" class="logo">
+               <span style="font-weight: 800;">Tasks </span><span style="font-weight: 200;">List</span>  
+            </a>
+            <div class="add-task" onclick="addBox()">
+                <i class="fas fa-plus-circle fa-2x"></i>&nbsp;&nbsp;<span class="icon-text">Add Item</span> 
+            </div>
+        </header>
+        <div id="next-header">
+            <a href="./index.html" class="back">
+              <span class="circle c3 material-icons">arrow_back_ios</span>
+               Back
+            </a>
+            <h1 id="main-header"> </h1>
+            <div class="add-task" onclick="addItemAfter()">
+                <i class="fas fa-plus-circle fa-2x"></i>
+            </div>
+        </div>
+        <div class="container-body">
+            <div id="parent">
+                <span id="default">No Items in the todo list</span> 
+                <div id="child">
+                    <h2 class="head2" id="child-head"></h2>
+                    <hr>
+                    <div class="icons" >
+                        <div onclick="add(this.id)" class="circle c1 material-icons" id="1">delete</div>
+                        <div class="circle c2 material-icons">add</div>
+                    </div>
+                </div> 
+             </div>
+        </div>
+    </div>
+   
+    <div id="overlay">
+        <div class="task">
+            <div class="task-head">Add New List</div>
+            <div>
+                    <input type="text" name="task" id="task" placeholder="Add New List" value=""><br>
+                    <button onclick="addTask()" class="btn">Add</button>
+                    <button onclick="closeBox()" class="btn">Close</button>
+            </div>
+        </div>
+    </div>
+    <div id="item-overlay">
+        <div class="task">
+            <div class="task-head">Add New Item</div>
+            <div>
+                    <input type="text" name="item" id="item" placeholder="Add New Item" value=""><br>
+                    <button id="addover" class="btn">Add</button>
+                    <button onclick="closeBox()" class="btn">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    
+</body>
+</html>
